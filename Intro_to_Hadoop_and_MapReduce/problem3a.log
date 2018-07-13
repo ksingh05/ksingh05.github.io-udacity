@@ -1,0 +1,44 @@
+Script started on Thu 10 Mar 2016 04:35:30 AM EST
+]0;training@localhost:~/udacity/Intro_to_Hadoop_and_MapReduce[?1034h[training@localhost Intro_to_Hadoop_and_MapReduce]$ hs mapper3a.py reducer3a.py  myinput problem3a
+packageJobJar: [mapper3a.py, reducer3a.py, /tmp/hadoop-training/hadoop-unjar3840671347864961200/] [] /tmp/streamjob842831829496348375.jar tmpDir=null
+16/03/10 04:35:48 WARN mapred.JobClient: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+16/03/10 04:35:48 WARN snappy.LoadSnappy: Snappy native library is available
+16/03/10 04:35:48 INFO snappy.LoadSnappy: Snappy native library loaded
+16/03/10 04:35:48 INFO mapred.FileInputFormat: Total input paths to process : 1
+16/03/10 04:35:48 INFO streaming.StreamJob: getLocalDirs(): [/var/lib/hadoop-hdfs/cache/training/mapred/local]
+16/03/10 04:35:48 INFO streaming.StreamJob: Running job: job_201603100413_0002
+16/03/10 04:35:48 INFO streaming.StreamJob: To kill this job, run:
+16/03/10 04:35:48 INFO streaming.StreamJob: UNDEF/bin/hadoop job  -Dmapred.job.tracker=0.0.0.0:8021 -kill job_201603100413_0002
+16/03/10 04:35:48 INFO streaming.StreamJob: Tracking URL: http://0.0.0.0:50030/jobdetails.jsp?jobid=job_201603100413_0002
+16/03/10 04:35:49 INFO streaming.StreamJob:  map 0%  reduce 0%
+16/03/10 04:36:00 INFO streaming.StreamJob:  map 18%  reduce 0%
+16/03/10 04:36:03 INFO streaming.StreamJob:  map 29%  reduce 0%
+16/03/10 04:36:06 INFO streaming.StreamJob:  map 41%  reduce 0%
+16/03/10 04:36:10 INFO streaming.StreamJob:  map 50%  reduce 0%
+16/03/10 04:36:22 INFO streaming.StreamJob:  map 71%  reduce 17%
+16/03/10 04:36:24 INFO streaming.StreamJob:  map 78%  reduce 17%
+16/03/10 04:36:25 INFO streaming.StreamJob:  map 86%  reduce 17%
+16/03/10 04:36:28 INFO streaming.StreamJob:  map 97%  reduce 25%
+16/03/10 04:36:30 INFO streaming.StreamJob:  map 100%  reduce 25%
+16/03/10 04:36:34 INFO streaming.StreamJob:  map 100%  reduce 68%
+16/03/10 04:36:37 INFO streaming.StreamJob:  map 100%  reduce 77%
+16/03/10 04:36:40 INFO streaming.StreamJob:  map 100%  reduce 86%
+16/03/10 04:36:43 INFO streaming.StreamJob:  map 100%  reduce 96%
+16/03/10 04:36:45 INFO streaming.StreamJob:  map 100%  reduce 100%
+16/03/10 04:36:47 INFO streaming.StreamJob: Job complete: job_201603100413_0002
+16/03/10 04:36:47 INFO streaming.StreamJob: Output: problem3a
+]0;training@localhost:~/udacity/Intro_to_Hadoop_and_MapReduce[training@localhost Intro_to_Hadoop_and_MapReduce]$ hadoop fs -ls
+Found 3 items
+drwxr-xr-x   - training supergroup          0 2016-03-10 02:01 example
+drwxr-xr-x   - training supergroup          0 2016-03-09 23:03 myinput
+drwxr-xr-x   - training supergroup          0 2016-03-10 04:36 problem3a
+]0;training@localhost:~/udacity/Intro_to_Hadoop_and_MapReduce[training@localhost Intro_to_Hadoop_and_MapReduce]$ hadoop fs -ls problem3a
+Found 3 items
+-rw-r--r--   1 training supergroup          0 2016-03-10 04:36 problem3a/_SUCCESS
+drwxr-xr-x   - training supergroup          0 2016-03-10 04:35 problem3a/_logs
+-rw-r--r--   1 training supergroup        426 2016-03-10 04:36 problem3a/part-00000
+]0;training@localhost:~/udacity/Intro_to_Hadoop_and_MapReduce[training@localhost Intro_to_Hadoop_and_MapReduce]$ hadoop fs -get problem3a/par t-00000 problem3a.txt
+]0;training@localhost:~/udacity/Intro_to_Hadoop_and_MapReduce[training@localhost Intro_to_Hadoop_and_MapReduce]$ exit
+exit
+
+Script done on Thu 10 Mar 2016 04:38:29 AM EST
